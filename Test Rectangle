@@ -1,0 +1,75 @@
+
+
+import java.util.Scanner;
+public class TestRectangle {
+    
+    public static void main(String[] args){
+        Scanner input = new Scanner(System.in);
+        int choice;
+       int length = 0;
+       int width = 0;
+       int results;
+        
+    Rectangle myRectangle = new Rectangle();
+    
+    //the menu
+    System.out.println("Lisa Tidball - Assignment7\n");
+    
+   
+    System.out.println("1. Set length");
+   
+    System.out.println("2. Set Width");
+   
+    System.out.println("3. Exit");
+  
+    System.out.println("Choice:");
+    choice = input.nextInt();
+    
+    switch (choice)
+    {
+        //results of the choice
+        case 1:
+        {
+            System.out.printf("What is the length?");
+            length = input.nextInt();
+            myRectangle.setLength(length); //method in class cannot be applied to given types
+            myRectangle.getArea();
+            myRectangle.getPerimeter();
+            System.out.println("1. Set length");
+            System.out.println("2. Set Width");
+            System.out.println("3. Exit");
+            System.out.println("Choice:");
+            choice = input.nextInt();
+            break;
+        }
+        case 2:
+        {
+            System.out.printf("What is the width?");
+            width = input.nextInt();
+            myRectangle.setWidth(width);
+            myRectangle.getArea();
+            myRectangle.getPerimeter();
+            System.out.println("1. Set length");
+            System.out.println("2. Set Width");
+            System.out.println("3. Exit");
+            System.out.println("Choice:");
+            choice = input.nextInt();
+            break;
+        }
+        case 3:
+        {
+            System.out.printf("Have a wonderful day");
+            break;
+        }
+        default:
+        {
+            System.out.println("Please enter a number of 1-3");
+        }
+        
+        
+        results = width * length;
+        System.out.println(results);
+    }
+        
+    }//end main
+}
