@@ -1,0 +1,90 @@
+//<Assignment4Project3> -- computer assisted instruction
+//CSIS 212-Module/Week 4
+//<Citations> -- I used the book
+
+import java.util.Scanner;
+import java.security.SecureRandom; 
+
+public class Assignment4Project3 {
+
+    
+    public static void main(String[] args) {
+         System.out.println("Lisa Tidball - Assignment1\n");
+    
+          Scanner input = new Scanner(System.in);
+         int answer;
+          
+          //Getting a random number
+         SecureRandom randomNumbers = new SecureRandom();
+         
+         int randomValue = randomNumbers.nextInt();
+        
+    }//end main
+    
+    public static void math(){
+        Scanner input = new Scanner(System.in);
+        int answer;
+       //prints out the first question
+        System.out.println("How much is 6 times 7?");
+         answer = input.nextInt();
+        
+        //figuring out if the answer is correct 
+         if ( answer == 42)
+             System.out.println("Very good");
+             
+        else
+        System.out.println("No, Please try again");
+            
+    }//end math 
+    
+    public static void math2(){
+        Scanner input = new Scanner(System.in);
+       
+        int answer2;
+        //prints out the second question
+        System.out.println("How much is 8 times 7?");
+        answer2 = input.nextInt();
+        
+        //figuring out if the answer is correct
+        if (answer2 == 56)
+            System.out.println("Very good");
+        
+        else
+            System.out.println("No, Please try again");
+            
+    }//end math2
+    
+      public static void math3(){
+          Scanner input = new Scanner(System.in);
+          int answer3;
+          //asking the third question
+          System.out.println("How much is 9 times 9?");
+          answer3 = input.nextInt();
+          
+          //figuring out if the answer is correct
+        if (answer3 == 81)
+            System.out.println("Very good");
+        else
+            System.out.println("No, Please try again");
+            
+           
+    }//end math3
+      
+        public static void math4(){
+            Scanner input = new Scanner(System.in);
+            int answer4;
+            
+            //asking the third question
+             System.out.println("How much is 8 times 9?");
+             answer4 = input.nextInt();
+             
+             //figuring out if the answer is correct
+        if (answer4 == 72)
+            System.out.println("Very good");
+        else
+            System.out.println("No, Please try again");
+        
+        
+    }//end math4
+    
+}//end class
