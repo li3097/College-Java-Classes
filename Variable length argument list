@@ -1,0 +1,33 @@
+//<Assignment5Project1> -- variable-length argument list
+//CSIS 212-Module/Week 5
+//<Citations> -- I used the book
+public class Assignment5Project1 {
+
+    public static double product(double... numbers)
+    {
+        //looping through the numbers
+      double total = 0;
+      for(double d : numbers)
+          total = d;
+      return total / numbers.length;
+    }//end product
+    
+    public static void main(String[] args) {
+        System.out.println("Lisa Tidball - Assignment1\n");
+    
+        //variables
+        double d1 = 1;
+        double d2 = 2;
+        double d3 = 3;
+        double d4 = 4;
+        
+        //display the answers
+        System.out.printf("d1 = %.1f%nd2 = %.1f%nd3 = %.1f%nd4 = %.1f%n%n", d1, d2, d3, d4 );
+        System.out.printf("The product of d1 and d2 is %.1f%n", product(d1 * d2) );
+        System.out.printf("The product of d1, d2, and d3 is %.1f%n", product(d1 * d2 * d3));
+        System.out.printf("The product of d1, d2, d3, and d4 is %.1f%n", product(d1 * d2 * d3 * d4));
+        
+        
+    }//end main
+    
+}//end class
