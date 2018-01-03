@@ -1,0 +1,52 @@
+//<Assignment4Project1> -- Whether a number is a multiple of another
+//CSIS 212-Module/Week 4
+//<Citations> -- I used the book and https://docs.oracle.com/javase/tutorial/java/nutsandbolts/if.html on 11/24/17.
+
+import java.util.Scanner;
+public class Assignment4Project1 {
+
+   
+    public static void main(String[] args) {
+      System.out.println("Lisa Tidball - Assignment1\n");
+    
+      //scanner is used here
+        Scanner input = new Scanner(System.in);
+        
+        //variables are listed
+        int number1;
+        int number2;
+        int answer1;
+        
+        //Asking for user to input numbers
+        System.out.println("Please enter a number:");
+        number1 = input.nextInt();
+        
+        System.out.println("Please enter a second number:");
+        number2 = input.nextInt();
+        
+        //reading from the other method and displaying the answer
+        double math = isMultiple(number1, number2);
+        System.out.printf("The numbers are multiples of each other:" + math);
+    }
+    //figuring out if its a multiple of the other
+     public static int isMultiple(int number1, int number2){
+
+         int isMultiple;
+         boolean result;
+         
+        //figuring out if the number is a multiple of the other
+        isMultiple = number1 % number2;
+        
+        //Displaying the answer depending if its a multiple
+        
+        if ( isMultiple == 0)
+            result = true;
+            
+        if (!(isMultiple == 0))
+            result = false;
+        
+        return isMultiple;
+        
+    }//end static 
+
+}//end public class
