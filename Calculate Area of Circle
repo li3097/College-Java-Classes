@@ -1,0 +1,39 @@
+//<Assignment4Project2> -- calculate the area of a circle based off the radius
+//CSIS 212-Module/Week 4
+//<Citations> -- I used the book
+
+import java.util.Scanner;
+
+public class Assignment4Project2 {
+
+    
+    public static void main(String[] args, double circleArea) {
+        System.out.println("Lisa Tidball - Assignment1\n");
+        
+        Scanner input = new Scanner(System.in);
+        double radius;
+        
+       //requests the user to put in the radius
+        System.out.println("What is the radius of a circle?");
+        radius = input.nextInt();
+        
+        //displays the final answer
+        double circle = circleArea(radius);
+       
+        System.out.printf("The area of the circle is: ", + circle);
+    }//end main
+
+    public static double circleArea(double radius){
+       //variables
+        double Area;
+        double pie = 3.14;
+        double radiusSquared;
+        
+        //figures out the area
+        radiusSquared = radius * radius;
+        Area = radiusSquared * pie;
+        return Area;
+        
+    }//end circleArea
+    
+}//end class
