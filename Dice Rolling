@@ -1,0 +1,112 @@
+//<Assignment5Project2> -- Dice Rolling
+//CSIS 212-Module/Week 5
+//<Citations> -- I used the book
+
+
+import java.security.SecureRandom;
+public class Assignment5Project2 {
+
+   
+    public static void main(String[] args) {
+        System.out.println("Lisa Tidball - Assignment5\n");
+        
+        // random number generator
+        SecureRandom randomNumbers = new SecureRandom();
+        
+        SecureRandom randomNumbers2 = new SecureRandom();
+        
+        //variables
+        int frequency1 = 0;
+        int frequency2 = 0;
+        int frequency3 = 0;
+        int frequency4 = 0;
+        int frequency5 = 0;
+        int frequency6 = 0;
+        int frequency7 = 0;
+        int frequency8 = 0;
+        int frequency9 = 0;
+        int frequency10 = 0;
+        int frequency11 = 0;
+        int frequency12 = 0;
+        int sum;
+        
+        //looping through the numbers and getting the numbers
+        for(int roll = 1; roll <= 36000; roll ++)
+        {
+            int face = 1 + randomNumbers.nextInt(12);
+            int face2 = 1 + randomNumbers2.nextInt(12);    
+         
+            //adding the numbers together
+                 sum = face + face2;
+            
+            switch(sum)
+            {
+                
+                case 2:
+                {
+                    ++frequency2;
+                    break;
+                }
+                    
+                case 3:
+                {
+                    ++frequency3;
+                    break;
+                }    
+                case 4:
+                {
+                    ++frequency4;
+                    break;
+                }
+                case 5:
+                { 
+                    ++frequency5;
+                    break;
+                }
+                case 6:
+                {
+                    ++frequency6;
+                    break;
+                }
+                 case 7:
+                {
+                    ++frequency7;
+                    break;
+                }
+                 case 8:
+                {
+                    ++frequency8;
+                    break;
+                }
+                 case 9:
+                {
+                    ++frequency9;
+                    break;
+                }
+                 case 10:
+                {
+                    ++frequency10;
+                    break;
+                }
+                 case 11:
+                {
+                    ++frequency11;
+                    break;
+                }
+                 case 12:
+                {
+                    ++frequency12;
+                    break;
+                }
+            }//end switch
+               
+            
+        }//end for
+        
+        //displaying the numbers
+        System.out.println("Face\tFrequency");
+        System.out.printf("1\t%d%n2\t%d%n3\t%d%n4\t%d%n5\t%d%n6\t%d%n7\t%d%n8\t%d%n9\t%d%n10\t%d%n11\t%d%n12\t%d%n", frequency1, frequency2, frequency3, frequency4, frequency5, frequency6, frequency7, frequency8, frequency9, frequency10, frequency11, frequency12);
+        
+    }//end main
+    
+}//end class
