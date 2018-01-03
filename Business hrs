@@ -1,0 +1,95 @@
+//<Assignment1 Final Project> -- Display a list of business hrs based on the day
+//CSIS 212-Module/Week 8
+//<Citations> -- I used the book
+
+
+import java.util.EnumSet;
+import java.util.Scanner;
+
+
+public class Enum {
+
+    enum Days {MON, TUE, WED, THU, FRI, SAT, SUN}
+    
+    public static void main(String[] args) {
+        
+       
+        
+        //course requirement
+        System.out.println("Lisa Tidball - Assignment8\n");
+        
+        //array of days entry
+        String[] days = new String[7];
+        days[0] = "MON";
+        days[1] = "TUE";
+        days[2] = "WED";
+        days[3] = "THU";
+        days[4] = "FRI";
+        days[5] = "SAT";
+        days[6] = "SUN";
+        Scanner scan = new Scanner(System.in);
+        
+        //prints the title of list of days
+        System.out.println("List of Days");
+        
+        //loops through the days
+        for(String day1 : days)
+        { 
+            System.out.println(day1);
+        }
+        
+        //asks for user to enter a day
+        System.out.println("Enter a desired Day:");
+        Days entry = Days.valueOf(scan.nextLine());
+        
+        //displays business hours based on users answer
+        switch(entry)
+        { 
+            case MON: 
+                System.out.println("Business hours are: 6am - 2pm"); 
+                break;
+            case TUE:
+                System.out.println("Business hours are: 7am - 3pm");
+                break;
+            case WED:
+                System.out.println("Business hours are: 8sm- 4pm");
+                break;
+            case THU:
+                System.out.println("Business hours are: 9am - 5pm");
+                break;
+            case FRI:
+                System.out.println("Business hours are: 10am - 6pm");
+                break;
+            case SAT:
+                System.out.println("Business hours are 11am - 7pm");
+                break;
+            case SUN:
+                System.out.println("Business hours are 1pm - 5pm");
+                break;
+                       
+        }
+        
+        
+        //creating the arrays
+        /*int[] week = new int[7]; 
+        int Sunday[0] = [1pm - 5pm];
+        int Monday[1] = [6am - 2pm];
+        int Tuesday[2] = [7am - 3pm];
+        int Wednesday[3] = [8am - 4pm];
+        int Thursday[4] = [9am - 5pm];
+        int Friday[5] = [10am - 6pm];
+        int Saturday[6] = [11am - 7pm];
+
+  //loop to go through the arrays
+        for(double counter = 0; counter <= week.length; counter++)
+        
+            return counter;
+
+        hours = (weekday[]);
+        
+        //Display the hours based on what hours the user wanted to see
+    System.out.println(hours);
+*/
+    }//end main
+    
+}//end class
