@@ -1,0 +1,73 @@
+///<Pair> Use generic class to print pair
+//CSIS312 - <Assignment 7>
+//Citations if necessary>--
+package pair;
+
+/**
+ *
+ * @author lirby
+ */
+public class Pair <F,S>{
+
+    //variables
+    private F first;
+    private S second;
+    
+    //constructor
+    public Pair(F first, S second){
+        this.first 
+        = first;
+        this.second = second;
+    }
+    
+    //setters
+    public void setFirst(F first) {
+        this.first = first;
+    
+    }
+    public void setSecond(S second){
+        this.second = second;
+    }
+    
+    //getters
+    public F getFirst(){
+        return first;
+    }  
+    public S getSecond(){
+        return second;
+    }
+}//end class
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package pair;
+
+/**
+ *
+ * @author lirby
+ */
+public class PairTest {
+      public static void main(String[] args) {
+        // TODO code application logic here
+        
+        //required class line
+         System.out.println("Lisa Tidball - Assignment 7");
+        
+         //pairs
+         Pair<Integer, String> p1 = new Pair<>(7, "March");
+        Pair<String, Integer> p2 = new Pair<>("May", 9);
+        
+        //print first pair
+        System.out.printf("%s,%s", p1.getFirst(), p1.getSecond());
+        System.out.println();
+        
+        //print second pair
+        System.out.printf("%s,%s", p2.getFirst(), p2.getSecond());
+        System.out.println();
+    }
+}
+
+
