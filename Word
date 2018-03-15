@@ -38,7 +38,8 @@ public class Word {
     
     public String getPreposition(){
     return preposition;
-    }
+
+}
     
     public String getArticle2(){
     return article2;
@@ -87,3 +88,33 @@ public class Word {
     }//end main
     
 }//end class Word
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package word;
+
+/**
+ *
+ * @author lirby
+ */
+public class Sentence {
+    
+    //variable
+    StringBuilder Word;
+    
+    //constructor
+    
+    public Sentence(StringBuilder Word){
+    this.Word = Word;
+    }
+    
+    //getter
+    public StringBuilder getSentence(){
+        StringBuilder sentence = null;
+    return sentence;
+    }
+}
+
