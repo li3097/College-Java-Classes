@@ -1,0 +1,89 @@
+//<Word> Random String creator 
+//CSIS312 - <Assignment4>
+//Citations if necessary>--
+
+import java.security.SecureRandom;
+public class Word {
+    
+    //variables
+  private String article = null;
+    private String noun = null;
+    private String verb = null;
+    private String preposition = null;
+    private String article2 = null;
+    //constructor
+    public Word(String article, String noun, String verb, String preposition, String article2){
+    
+        this.article = article;
+        this.noun = noun;
+        this.verb = verb;
+        this.preposition = preposition;
+        this.article2 = article2;
+    }
+    
+    //getters
+    public String getArticle(){
+      
+      return article;
+    }
+    
+    public String getNoun(){
+       
+        return noun;
+    }
+    
+    public String getVerb() {
+    return verb;
+    }
+    
+    public String getPreposition(){
+    return preposition;
+    }
+    
+    public String getArticle2(){
+    return article2;
+    }
+    
+    
+    public static void main(String[] args) {
+        
+        //class required sentence
+        System.out.println("Lisa Tidball - Assignment 4");
+        
+        //arrays
+        String[] article = {"the", "a", "one", "some", "any"};
+    String[] noun = {"boy", "girl", "dog", "town", "car"};
+    String[] verb = {"drove", "jumped", "ran", "walked", "skipped"};
+    String[] preposition = {"to", "from", "over", "under", "on"};
+    String[] article2 = {"and"};
+        
+    //random generator
+            SecureRandom randomNumbers = new SecureRandom();
+
+        
+      
+        
+        //for loop to go through and create sentences
+        for(int getSentence = 0; getSentence < 20; getSentence++){
+            
+             StringBuilder sentence = new StringBuilder();
+            
+            int randomArticle = randomNumbers.nextInt(article.length-1);
+            int randomNoun = randomNumbers.nextInt(noun.length-1);
+            int randomVerb = randomNumbers.nextInt(verb.length-1);
+            int randomPreposition = randomNumbers.nextInt(preposition.length-1);
+            
+            String randomA = article[randomArticle];
+            randomA = randomA.substring(0, 1).toUpperCase() + randomA.substring(1);
+            sentence.append(randomA).append(" ")
+                    .append(noun[randomNoun]).append(" ")
+                    .append(verb[randomVerb]).append(" ")
+                    .append(preposition[randomPreposition]).append(" ")
+                    .append(noun[randomNoun]).append(" ")
+                    .append(article2[0]).append(" ")
+                    .append(noun[randomNoun]).append(".");
+        System.out.println(sentence.toString());
+        }//end for loop
+    }//end main
+    
+}//end class Word
