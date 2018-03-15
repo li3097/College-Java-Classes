@@ -1,0 +1,77 @@
+//<Random Integers> Producing random numbers using LinkedList
+//CSIS312 - <Assignment 5-1>
+//Citations if necessary>--
+package linkedlistintegers;
+
+import java.util.List;
+import java.util.LinkedList;
+import java.util.ListIterator;
+import java.util.Collections;
+import java.security.SecureRandom;
+import java.util.Arrays;
+ 
+public class LinkedListIntegers {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+         // TODO code application logic here
+	  Integer [] numbers= new Integer[25];
+	  LinkedList<Integer> listIntegers = new LinkedList<>();
+       System.out.println("Lisa Tidball - Assignment 5-1");
+       
+       
+       SecureRandom randomNumbers = new SecureRandom();
+        
+       for(int counter = 0; counter < 25; counter++){
+            numbers[counter] = randomNumbers.nextInt(101);
+           //# only objects go in a list
+            listIntegers.add(numbers[counter]);
+
+       //adding numbers to list
+       //String[] numbers = {};
+       }//end for loop
+         
+       
+       System.out.println("Unsorted list of Integers");
+       System.out.println(listIntegers);
+       Collections.sort(listIntegers);
+  
+   	   System.out.println("Sorted list of Integers");
+       System.out.println(listIntegers);
+            Integer sum =0; 
+    
+       /*for (Integer x in  listIntegers)
+            {
+               sum += x;
+            }*/
+            
+            // Or by index 
+            for (int i= 0; i< 25; i++)
+            {
+                //System.out.println(listIntegers.get(i));
+           sum += listIntegers.get(i);
+            }
+        System.out.println("The sum is "+sum);
+    
+      double avg = sum/25.0;
+      System.out.println("Average:");
+      System.out.println(avg);
+       //sort
+       /*List<String> numbers = Arrays.asList(numbers);
+       System.out.printf("Unsorted array elements: %s%n", numbers);
+       
+       Collections.sort(listIntegers);
+       System.out.printf("Sorted array elements: %s%n", numbers);
+       
+       //sum
+       List<String> numbers = Arrays.addAll(numbers);
+       System.out.printf("Sum of array elements: %s%n", numbers);
+       */
+      //floating-point average
+       //listIntegers.average(numbers[counter]);
+       //System.out.printf(listIntegers);
+  }//end main
+    
+}//end class LinkedListIntegers
