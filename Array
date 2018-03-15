@@ -1,0 +1,36 @@
+//<Recursive> display elements in an array of integers
+//CSIS312 - <Assignment 6-2>
+//Citations if necessary>--
+package array;
+
+import java.security.SecureRandom;
+public class Array {
+
+    public void printArray(int[] array, int step){
+        
+        if(step < array.length){
+            System.out.print(array[step] + " ");
+            step++;
+            printArray(array,step);
+        }
+    }
+  
+    public static void main(String[] args) {
+        // TODO code application logic here
+        System.out.println("Lisa Tidball - Assignment 6-2");
+        
+        SecureRandom randomNumbers = new SecureRandom();
+        int[] array = new int[100];
+       // array = 1 + randomNumbers.nextInt(100);
+        for(int i = 0; i < array.length ; i++)
+            array[i] = 1 + randomNumbers.nextInt(100);
+      
+        Array r = new Array();
+      	r.printArray(array, 0);
+       	
+        
+    }//end main
+    
+
+    
+}//end class Array
