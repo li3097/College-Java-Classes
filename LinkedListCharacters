@@ -1,0 +1,41 @@
+//<Random Integers> Producing random characters using LinkedList
+//CSIS312 - <Assignment 5-2>
+//Citations if necessary>--
+package linkedlistcharacters;
+
+import java.util.List;
+import java.util.LinkedList;
+import java.util.ListIterator;
+import java.util.Collections;
+import java.security.SecureRandom;
+import java.util.Arrays;
+
+public class LinkedListCharacters {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        System.out.println("Lisa Tidball - Assignment 5-2");
+        
+        Character[] characters = {'a', 's', 'i', 'l', '/' , 'i', 'r', 'r', 'e', 't'};
+       LinkedList<Character> listCharacter = new LinkedList<Character>();
+       
+      // List<String> list2 = new LinkedList<>();
+       for(int i = 0; i<10; i++){
+         Character x = characters[i];
+      listCharacter.add(x);
+       }
+       
+       System.out.printf("Object array elements: %s%n", listCharacter);
+        
+        Collections.reverse(listCharacter);
+         System.out.printf("Reverse object array elements: %s%n", listCharacter);
+       
+       
+       
+       
+    }
+    
+}
